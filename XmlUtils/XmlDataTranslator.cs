@@ -8,9 +8,21 @@ namespace XmlUtils
 {
     public static class XmlDataTranslator<T> where T : class
     {
+        public static IEnumerable<T> Translate(string path)
+        {
+            var doc = XDocument.Load(path);
+
+            return TranslateDoc(doc);
+        }
         public static IEnumerable<T> Translate(Stream xmlStream)
         {
             var doc = XDocument.Load(xmlStream);
+
+            return TranslateDoc(doc);
+        }
+
+        private static IEnumerable<T> TranslateDoc(XDocument doc)
+        {
             var root = doc.Root;
             var entityType = typeof(T);
 
@@ -38,7 +50,6 @@ namespace XmlUtils
             return entityRecords
                 .Select(entity => ParseEntity(entity, mapping));
         }
-
         private static T ParseEntity(
             XElement entityElement,
             IEnumerable<KeyValuePair<string, Tuple<string, string>>> mapping)

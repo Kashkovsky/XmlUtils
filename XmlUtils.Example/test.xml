@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Users>
+  <User>
+    <UserName>Denis</UserName>
+    <LastName>Kashkovsky</LastName>
+    <Age>30</Age>
+  </User>
+  <User>
+    <UserName>Jane</UserName>
+    <LastName>Doe</LastName>
+    <Age>28</Age>
+  </User>
+</Users>
