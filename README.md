@@ -10,11 +10,11 @@
 [XmlData("User")] // Define single entity element name
 class SomeEntity
     {
-        [XmlData("UserName", ParentName = "User")] // "UserName" - name of element
+        [XmlData("UserName")] // "UserName" - name of element
         public string Name { get; set; }
-        [XmlData("LastName", ParentName = "User")] // ParentName - optional name of parent element
+        [XmlData("LastName")] 
         public string LastName { get; set; }
-        [XmlData("Age", ParentName = "User")]
+        [XmlData("Age", ParentName = "Details")] // Optional parent element name
         public int Age { get; set; }
     }
 ```
@@ -22,3 +22,5 @@ class SomeEntity
 ```C#
 IEnumerable<SomeEntity> entities = XmlDataTranslator<SomeEntity>.Translate(filePath);
 ```
+
+See example in XmlUtils.Example project
