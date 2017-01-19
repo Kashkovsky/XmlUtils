@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>BourneAgain.Utility.XmlUtils</id>
-    <version>1.0.0</version>
+    <version>1.0.0.1</version>
     <title>$title$</title>
     <authors>Denis Kashkovsky</authors>
     <owners>Denis Kashkovsky</owners>
     <projectUrl>https://github.com/Mr-Zoidberg/XmlUtils</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Generic XML-To-Entity Parser for C#</description>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>Translate from file path added.</releaseNotes>
     <copyright>Denis Kashkovsky Copyright 2017</copyright>
     <tags>XML, parse, parser, to object</tags>
   </metadata>
