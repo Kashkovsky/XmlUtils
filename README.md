@@ -7,6 +7,7 @@
 ####Usage
 1. Create model
 ```C#
+[XmlData("User")] // Define single entity element name
 class SomeEntity
     {
         [XmlData("UserName", ParentName = "User")] // "UserName" - name of element
