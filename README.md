@@ -20,8 +20,5 @@ class SomeEntity
 ```
 2. Translate file
 ```C#
-using (var stream = File.Open(@"text.xml", FileMode.Open))
-    {
-        IEnumerable<SomeEntity> entities = XmlDataTranslator<SomeEntity>.Translate(stream);
-    }
+IEnumerable<SomeEntity> entities = XmlDataTranslator<SomeEntity>.Translate(filePath);
 ```
